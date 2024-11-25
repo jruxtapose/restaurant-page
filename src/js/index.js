@@ -1,26 +1,15 @@
 import "../css/styles.css";
+import "../css/home.css";
 import { homePage, menuPage, aboutPage } from "./pages.js";
 
 const homeButton = document.querySelector('.home');
 const menuButton = document.querySelector('.menu');
 const aboutButton = document.querySelector('.about');
 
-homePage();
+menuPage();
 
-homeButton.addEventListener('click', () => {
-       const contentContainer = document.querySelector('#content');
-       contentContainer.textContent = '';
-       homePage();
-});   
+homeButton.addEventListener('click', () => homePage());
 
-menuButton.addEventListener('click', () => {
-       const contentContainer = document.querySelector('#content');
-       contentContainer.textContent = '';
-       menuPage();
-});
+menuButton.addEventListener('click', () => menuPage());
 
-aboutButton.addEventListener('click', () => {
-    const contentContainer = document.querySelector('#content');
-    contentContainer.textContent = '';
-    aboutPage();
-})
+aboutButton.addEventListener('click', () => aboutPage())

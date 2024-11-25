@@ -1,16 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
+:root {
+    --emphasis: #6BD0C5;
+    --background-dark: #283233;
+    --low-contrast: #957575;
+}
+.im-fell-english-regular {
+    font-family: "IM Fell English", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.im-fell-english-regular-italic {
+font-family: "IM Fell English", serif;
+font-weight: 400;
+font-style: italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
     gap: 25px;
 }
 
-#content {
+header nav {
+    display: flex;
+    gap: 25px;
+    padding-top: 25px;
+}
+
+header nav button {
+    border: none;
+    background-color: transparent;
+    font-size: 2em;
+    font-family: 'IM Fell English', serif;
+    text-transform: uppercase;
+}
+
+#content{
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 60px;
 }
 
-#content > img {
-    width: 800px;
+footer{
+    height: 100px;
+
+
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+
+}
+
+footer > ul > li {
+    opacity: 1;
+    transition: opacity .25s cubic-bezier(.07, .95, 0, 1);
+}
+
+footer > ul:hover > li{
+    opacity: 0.25;
+}
+
+footer > ul:hover > li:hover{
+    opacity: 1;
+}
+
+footer ul li svg{
+    width: 3em;
 }
