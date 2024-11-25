@@ -12,4 +12,4 @@ homeButton.addEventListener('click', () => homePage());
 
 menuButton.addEventListener('click', () => menuPage());
 
-aboutButton.addEventListener('click', () => aboutPage())
+aboutButton.addEventListener('click', () => aboutPage());
