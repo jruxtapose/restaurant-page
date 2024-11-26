@@ -2,7 +2,9 @@
 :root {
     --emphasis: #6BD0C5;
     --background-dark: #283233;
-    --low-contrast: #957575;
+    --background-light: #f6f4d5;
+    --low-contrast-rosy-brown: #957575;
+    --low-contrast-forest-green: #2e8226;
 }
 .im-fell-english-regular {
     font-family: "IM Fell English", serif;
@@ -29,6 +31,7 @@ body {
     align-items: center;
     min-height: 100vh;
     gap: 25px;
+    background-color: var(--low-contrast-forest-green);
 }
 
 header nav {
@@ -43,6 +46,12 @@ header nav button {
     font-size: 2em;
     font-family: 'IM Fell English', serif;
     text-transform: uppercase;
+    cursor: pointer;
+    color: var(--emphasis)
+}
+
+header nav button:hover {
+    color: var(--low-contrast-rosy-brown)
 }
 
 #content{
@@ -51,6 +60,7 @@ header nav button {
     flex-direction: column;
     align-items: center;
     padding: 60px;
+    border-radius: 1em;
 }
 
 footer{

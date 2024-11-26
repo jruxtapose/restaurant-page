@@ -1,0 +1,38 @@
+.menu-page {
+    background-color: var(--background-light);
+    font-family: 'IM Fell English', serif;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 2em;
+    padding: 25px;
+}
+
+dl{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 50%);
+    padding: 10px;
+    margin-top: 25px;
+    border-radius: 1em;
+}
+
+dt {
+    padding-top: 15px;
+    font-size: 1.5em;
+}
+
+dd {
+    text-align: right;
+    font-size: 1.2em;
+    width: 70%;
+    align-self: flex-end;
+}
+
+

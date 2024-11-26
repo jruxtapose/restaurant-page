@@ -41,17 +41,53 @@ const homePage = (() => {
 })
 
 const menuPage = (() => {
+    let sandwichMenu = [
+        {
+            name: 'Italian Sub',
+            description: 'Luna hoagie roll, ham, salami, pepperoni served with lettuce, tomato, provolone cheese, pepperoncini, red onion, red wine vinegar, olive oil, and mayo',
+            price: '8.0'
+        },
+        {
+            name: 'Patrami on Rye',
+            description: 'Luna marbe rye bread, pastrami, house made coleslaw, dijon mustard, and swiss cheese',
+            price: '9.0'
+        },
+        {
+            name: 'Fre Shavaca Do',
+            description: 'Luna marble rye bread, avocado, tomato, spinach, red onion, swiss cheese, and house made chipotle mayo',
+            price: '8.0'
+        }
+    ];
+
+
     resetContainer();
     contentContainer.className = 'menu-page';
-    const header = document.createElement('h1');
-    header.textContent = "Welcome to the Rook and Pawn";
+    const menuHeader = document.createElement('h1');
+    menuHeader.textContent = "Menu";
+    contentContainer.appendChild(menuHeader);
 
-    const bodyText = document.createElement('p');
-    bodyText.textContent = "This will be a menu eventually";
+    const coldSandwichesTitle = document.createElement('h2');
+    coldSandwichesTitle.textContent = 'Cold Sandwiches'
+    contentContainer.appendChild(coldSandwichesTitle);
 
-    contentContainer.appendChild(logo);
-    contentContainer.appendChild(header);
-    contentContainer.appendChild(bodyText);
+    const listWrapper = document.createElement('dl');
+    for(let sandwich in sandwichMenu){
+        const sandwichName = document.createElement('dt');
+        const sandwichDescription = document.createElement('dd');
+        const sandwichPrice = document.createElement('dd');
+        sandwichName.textContent = sandwichMenu[sandwich].name;
+        sandwichDescription.textContent = sandwichMenu[sandwich].description;
+        sandwichPrice.textContent = sandwichMenu[sandwich].price;
+        listWrapper.appendChild(sandwichName);
+        listWrapper.appendChild(sandwichDescription);
+        listWrapper.appendChild(sandwichPrice);
+        const split = document.createElement('hr');
+        if(sandwichMenu.at(-1) !== sandwichMenu[sandwich]){
+            listWrapper.appendChild(split);
+        }
+    }
+
+    contentContainer.appendChild(listWrapper);
 })
 
 const aboutPage = (() => {
