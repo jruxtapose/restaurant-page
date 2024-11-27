@@ -1,0 +1,18 @@
+.about-page {
+    background-color: var(--background-dark);
+}
+
+h1{
+    color: var(--emphasis);
+    font-size: 4em;
+}
+
+h2 {
+    color: var(--emphasis);
+    font-size: 2em;
+}
+
+p {
+    color: var(--low-contrast-rosy-brown);
+    font-size: 1.2em;
+}

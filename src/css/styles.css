@@ -32,6 +32,7 @@ body {
     min-height: 100vh;
     gap: 25px;
     background-color: var(--low-contrast-forest-green);
+    font-family: 'IM Fell English', serif;
 }
 
 header nav {
@@ -44,8 +45,8 @@ header nav button {
     border: none;
     background-color: transparent;
     font-size: 2em;
-    font-family: 'IM Fell English', serif;
     text-transform: uppercase;
+    font-family: 'IM Fell English', serif;
     cursor: pointer;
     color: var(--emphasis)
 }
